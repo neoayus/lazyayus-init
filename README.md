@@ -8,8 +8,9 @@ to install nvim, zsh, bash and they' configuration on every system i put my fing
 
 - execute 'nvim.sh' 
 
-``
+```
 curl -fsSL https://github.com/neoayus/lazyayus-init/raw/main/your-script.sh -o your-script.sh
 chmod +x your-script.sh
 ./nvimbtw.sh
+
 ```
