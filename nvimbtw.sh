@@ -1,10 +1,9 @@
 #!/bin/bash
 
-dotfiles_repo = "git@github.com:neoayus/dotfiles.git"
-dotfiles_dir = "$HOME" 
+dotfiles_repo="git@github.com:neoayus/dotfiles.git"
+dotfiles_dir="$HOME/dotfiles"  # safer target directory
 
-# function to check 'if' or Install a package 
-# cNi for check and install 
+# Function to check if package is installed, or install it
 cNi(){ 
     if ! which "$1" &> /dev/null ; then    
         echo "$1 not found, installing..."
@@ -14,24 +13,23 @@ cNi(){
     fi
 }
 
-# install required packages 
+# Install required packages
 cNi git 
-cni nvim 
+cNi neovim 
 cNi stow 
 
-# clone 'neoayus/dotfiles' locally.. 
-if [ ! -d "$dotfiles_dir"]; then 
+# Clone dotfiles if not already present
+if [ ! -d "$dotfiles_dir" ]; then 
     git clone "$dotfiles_repo" "$dotfiles_dir"  
 else
-    echo "WE ON ARCH BIC- " 
+    echo "Dotfiles directory already exists"
 fi
 
-# change working directory to ~/dotfiles 
-cd ~/dotfiles/ 
+# Change working directory to ~/dotfiles
+cd "$dotfiles_dir" || exit
 
-# load configs 
+# Load configs
 stow nvim 
-stow bash 
 
-# remove git source from local repo 
-rm -rf .git 
+# Remove git history (optional)
+rm -rf .git
