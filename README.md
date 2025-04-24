@@ -4,12 +4,14 @@ to install nvim, zsh, bash and they' configuration on every system i put my fing
 ## HOW TO INSTALL 
 - Install 'Curl' if not already installed..
 
-`command -v curl &>/dev/null || sudo apt-get install -y curl`
+```
+command -v curl &>/dev/null || sudo apt-get install -y curl
+```
 
 - execute 'nvim.sh' 
 
 ```
-curl -fsSL https://github.com/neoayus/lazyayus-init/raw/main/your-script.sh -o your-script.sh
+curl -fsSL https://github.com/neoayus/lazyayus-init/raw/main/nvimbtw.sh -o nvimbtw.sh
 chmod +x your-script.sh
 ./nvimbtw.sh
 
