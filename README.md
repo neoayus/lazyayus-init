@@ -12,7 +12,7 @@ command -v curl &>/dev/null || sudo apt-get install -y curl
 
 ```
 curl -fsSL https://github.com/neoayus/lazyayus-init/raw/main/nvimbtw.sh -o nvimbtw.sh
-chmod +x your-script.sh
-./nvimbtw.sh
+chmod +x nvimbtw.sh
+sudo ./nvimbtw.sh
 
 ```
