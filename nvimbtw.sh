@@ -1,7 +1,8 @@
 #!/bin/bash
 
 dotfiles_repo="https://github.com/neoayus/dotfiles.git"
-dotfiles_dir="$HOME" 
+home_dir="$HOME" 
+dotfiles_dir="$HOME/dotfiles" 
 
 # function to check 'if' or Install a package 
 # cNi for check and install 
@@ -21,13 +22,13 @@ cNi stow
 
 # clone 'neoayus/dotfiles' locally.. 
 if [ ! -d "$dotfiles_dir" ]; then 
-    git clone "$dotfiles_repo" "$dotfiles_dir"  
+    git clone "$dotfiles_repo" "$home_dir"  
 else
     echo "WE ON ARCH BIC- " 
 fi
 
 # change working directory to ~/dotfiles 
-cd ~/dotfiles/ 
+cd $dotfiles_dir
 
 # load configs 
 stow nvim 
