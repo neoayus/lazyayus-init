@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles_repo = "git@github.com:neoayus/dotfiles.git"
+dotfiles_repo = "https://github.com/neoayus/dotfilew.git"
 dotfiles_dir = "$HOME" 
 
 # function to check 'if' or Install a package 
