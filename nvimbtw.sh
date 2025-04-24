@@ -33,7 +33,6 @@ cd $dotfiles_dir
 
 # load configs 
 stow nvim 
-stow bash 
 
 # remove git source from local repo 
 rm -rf .git 
