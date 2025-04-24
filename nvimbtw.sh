@@ -22,7 +22,8 @@ cNi stow
 
 # clone 'neoayus/dotfiles' locally.. 
 if [ ! -d "$dotfiles_dir" ]; then 
-    git clone "$dotfiles_repo" "$home_dir"  
+    cd ~
+    git clone "$dotfiles_repo"  
 else
     echo "WE ON ARCH BIC- " 
 fi
