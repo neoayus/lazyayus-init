@@ -16,7 +16,7 @@ cNi(){
 
 # install required packages 
 cNi git 
-cNi nvim 
+cNi neovim 
 cNi stow 
 
 # clone 'neoayus/dotfiles' locally.. 
